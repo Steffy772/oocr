@@ -1,0 +1,13 @@
+<form action="#pdf_form" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <div class="custom-file my-2">
+                <input type="file" name="pdf">
+                <label class="custom-file-label">{{ pdf_form.image.label }}</label>
+                {% for error in field.errors %}
+                <span class="badge badge-danger">{{ error }}</span>
+                {% endfor %}
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </fieldset>
+    </form>
