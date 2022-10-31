@@ -22,5 +22,5 @@ urlpatterns = [
     path('', home, name='home'),
     path('search/', views.search, name='search'),
     path('search_pdf/', views.search_pdf, name='search_pdf'),
-    path('pdf/', views.pdf),
+    path('pdf/', views.pdf), 
     ]
